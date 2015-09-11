@@ -13,3 +13,15 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+input[type=submit] { @extend .btn; @extend .btn-success; }
+
+body{
+	padding-top: 50px;
+}
+
+.navbar {
+	height: auto;
+}

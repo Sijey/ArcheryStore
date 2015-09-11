@@ -6,8 +6,11 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class='<%= controller.controller_name %>'>
 
+	<p style="color: red;"><%= flash[:error] %></p>
+	<p style="color: green;"><%= flash[:success] %></p> 
+<%= render 'shared/navbar' %>
 <%= yield %>
 
 </body>

@@ -1,0 +1,24 @@
+%div(class="container")
+	%h1 Welcome
+
+	- if @products.empty?
+		%b No products
+	- else
+		
+
+		- @products.each do |i|
+				
+			%ul
+				%div.image
+				%div.desc
+					%div.name
+						= link_to i.name, product_path(i)
+						= i.price
+						= i.description
+						= i.weight
+				%div.delete
+					= link_to "Удалить", product_path(i), method: :delete, data: {confirm: "Вы уверенны?"}
+
+	%br
+
+	= link_to 'Добавить товар', new_product_path

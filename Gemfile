@@ -29,6 +29,8 @@ gem 'spring',        group: :development
 gem 'devise'
 gem 'haml-rails'
 gem 'sass-rails'
+gem 'simple_form'
+gem 'bootstrap-sass'
 # Use unicorn as the app server
 # gem 'unicorn'
 
