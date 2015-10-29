@@ -1,7 +1,7 @@
 %div(class="row")
 %div(class="container")
 	%h1 Add new product
-	= simple_form_for @product do |f|
+	= simple_form_for @product, html: { multipart: true } do |f|
 		= render partial: "form", locals: { f: f }
 		%p= f.submit "Добавить товар"
 	= link_to "Назад", products_path

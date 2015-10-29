@@ -31,6 +31,8 @@ gem 'haml-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'bootstrap-sass'
+gem 'carrierwave', '~> 0.9'
+gem 'mini_magick'
 # Use unicorn as the app server
 # gem 'unicorn'
 

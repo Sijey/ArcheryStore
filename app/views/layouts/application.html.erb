@@ -7,10 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
+	<div class="container">
 
 	<p style="color: red;"><%= flash[:error] %></p>
 	<p style="color: green;"><%= flash[:success] %></p> 
 <%= render 'shared/navbar' %>
+	</div>
 <%= yield %>
 
 </body>

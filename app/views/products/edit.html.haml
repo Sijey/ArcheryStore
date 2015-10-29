@@ -1,7 +1,11 @@
 %h1 Edit product
 
 
-= simple_form_for @product do |f|
+= simple_form_for @product, html: { multipart: true } do |f|
 	= render partial: "form", locals: { f: f }
+	%p
+	= f.check_box :remove_attachment
+	Remove Photo
 	%p= f.submit "Сохранить товар"
+
 = link_to "Назад", products_path

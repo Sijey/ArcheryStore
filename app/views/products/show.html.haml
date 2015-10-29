@@ -4,5 +4,7 @@
 	%li= @product.price
 	%li= @product.description
 	%li= @product.weight
+	= image_tag @product.attachment.url, :style => 'max-height: 300px;max-width: 300px;margin: 1 auto;display:block;', :class => 'img-thumbnail'
 
+= link_to "Редактировать", edit_product_path
 = link_to "Назад", products_path

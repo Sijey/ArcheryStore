@@ -6,6 +6,17 @@
 	td { border: solid 1px #aaa; padding: 0.5em; vertical-align: center; text-align: center; }
 	th {border: solid 1px #aaa; background-color:grey; text-transform: uppercase; text-align: center;}
 
+
+.view_content ul li {
+	border-bottom: dotted 1px #e6e6e6;
+	margin-bottom: 10px;
+	height: 105px;
+}
+
+.image {
+	float: left;
+	padding-right: 10px;
+}
 .delete {
 	float: right;
 }

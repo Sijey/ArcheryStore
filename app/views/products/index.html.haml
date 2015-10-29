@@ -4,21 +4,23 @@
 	- if @products.empty?
 		%b No products
 	- else
-		
-
-		- @products.each do |i|
-				
+		%div.view_content
 			%ul
-				%div.image
-				%div.desc
-					%div.name
-						= link_to i.name, product_path(i)
-						= i.price
-						= i.description
-						= i.weight
-				%div.delete
-					= link_to "Удалить", product_path(i), method: :delete, data: {confirm: "Вы уверенны?"}
+				- @products.each do |i|
+					
+					%li
+						%div.image
+							= image_tag i.attachment.small.url
+						%div.desc
+							%div.name
+								= link_to i.name, product_path(i)
+								= i.description
+								= i.weight
+						%div.delete
+							= i.price
+							грн.
+							= link_to "Удалить", product_path(i), method: :delete, data: {confirm: "Вы уверенны?"}
 
 	%br
 
-	= link_to 'Добавить товар', new_product_path
+	= link_to 'Добавить товар', new_product_path, class: "btn btn-primary"
