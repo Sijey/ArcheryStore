@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Product:
+  = @lina_item.product
+%p
+  %b Cart:
+  = @lina_item.cart
+
+= link_to 'Edit', edit_lina_item_path(@lina_item)
+\|
+= link_to 'Back', lina_items_path

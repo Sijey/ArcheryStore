@@ -1,0 +1,23 @@
+%h1 Listing lina_items
+
+%table
+  %thead
+    %tr
+      %th Product
+      %th Cart
+      %th
+      %th
+      %th
+
+  %tbody
+    - @lina_items.each do |lina_item|
+      %tr
+        %td= lina_item.product
+        %td= lina_item.cart
+        %td= link_to 'Show', lina_item
+        %td= link_to 'Edit', edit_lina_item_path(lina_item)
+        %td= link_to 'Destroy', lina_item, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Lina item', new_lina_item_path

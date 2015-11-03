@@ -12,3 +12,4 @@
 					%p= sanitize(product.description)
 					.price_line
 						%span.price= number_to_currency(product.price)
+						= button_to 'В корзину', lina_items_path(product_id: product)
