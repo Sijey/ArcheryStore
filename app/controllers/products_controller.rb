@@ -8,6 +8,16 @@ class ProductsController < ApplicationController
 		@products = @products.order("price").limit(50)
 	end
 
+	def who_bought
+		@product = Product.find(params[:id])
+		@latest_order = @product.orders.order(:updated_at).last
+		if stale?(@laatest_order)
+			respond_to do |format|
+				format.atom
+			end
+		end
+	end
+
 	def show
 		@product = Product.find(params[:id])
 		unless @product

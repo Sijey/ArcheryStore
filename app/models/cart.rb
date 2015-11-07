@@ -13,4 +13,14 @@ class Cart < ActiveRecord::Base
      	end
      	current_item
     end
+
+    def decrement(lina_item_id)
+    current_item = lina_items.find(lina_item_id)
+    if current_item.quantity > 1
+      current_item.quantity -= 1
+    else
+      current_item.destroy
+    end
+    current_item
+  end
 end

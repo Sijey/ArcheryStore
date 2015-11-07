@@ -1,15 +1,3 @@
 - if notice
 	%p#notice= notice
-%h2 Ваша корзина
-%table
-	- @cart.lina_items.each do |item|
-		%tr
-			%td= item.product.name
-			%td
-				= item.quantity
-				\×
-			%td.item_price= number_to_currency(item.total_price)
-	%tr.total_line
-		%td{:colspan => "2"} Total
-		%td.total_cell= number_to_currency(@cart.total_price)
-= button_to 'Очистить корзину', @cart, method: :delete, data: { confirm: 'Вы уверенны' }
+=render @cart

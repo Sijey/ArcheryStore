@@ -1,0 +1,9 @@
+= simple_form_for(@admin) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :name, size: 40
+    = f.password_field :password, size: 40
+    = f.password_field :pssword_confirmation, size: 40
+  .form-actions
+    = f.button :submit

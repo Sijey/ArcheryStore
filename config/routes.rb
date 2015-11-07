@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  get 'administrator/index'
+
+  get 'administrator' => 'administrator#index'
+  controller :sessions do
+    get 'login' => :new
+    post 'login' => :create
+    delete 'logout' => :destroy
+  end
+ 
+  resources :admins
+  resources :orders
   resources :lina_items
   resources :carts
   get 'store/index'
@@ -16,8 +27,12 @@ Rails.application.routes.draw do
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
-  resources :products
-
+  resources :products do
+    get :who_bought, on: :member
+  end
+  resources :lina_items do
+    put 'decrement', on: :member
+  end
   # Example resource route with options:
   #   resources :products do
   #     member do

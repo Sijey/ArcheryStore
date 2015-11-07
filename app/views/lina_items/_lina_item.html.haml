@@ -1,0 +1,7 @@
+%tr
+	%td
+		= lina_item.quantity 
+		\x
+	%td= lina_item.product.name
+	%td.item_price= number_to_currency(lina_item.total_price)
+	%td= link_to 'Удалить', decrement_lina_item_path(lina_item), method: :put, remote: true
