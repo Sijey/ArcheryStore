@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     if @cart.lina_items.empty?
-      redirect_to root_url, notice: "В Вашей корзине еще нет товаров"
+      redirect_to root_url, notice: "Your cart is empty"
       return
     end
 
@@ -40,7 +40,7 @@ class OrdersController < ApplicationController
         Cart.destroy(session[:cart_id])
         session[:cart_id] = nil
         OrderNotifier.received(@order).deliver_now
-        format.html { redirect_to root_url, notice: 'Ваш заказ оформлен.' }
+        format.html { redirect_to root_url, notice: I18n.t('.thanks') }
         format.json { render :show, status: :created, location: @order }
       else
         #@cart = current_cart

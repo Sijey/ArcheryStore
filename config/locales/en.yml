@@ -18,6 +18,33 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  store:
+    index:
+      title:     "Your Pragmatic Catalog"
+      add:     "Add to Cart"
+  carts:
+    cart:
+      title: "Your cart"
+      checkout: "Checkout"
+      empty: "Empty cart"
+  lina_items:
+    lina_item:
+      delete: "Delete"
+  orders:
+    new:
+      legend: "Please enter your details"
+    form:
+      name: "Name"
+      surname: "Surname"
+      email: "E-mail"
+      address: "Address"
+      pay_type: "Pay with"
+      pay_prompt: "Select a payment method"
+      submit: "Place order"
+  thanks: "Thank you for your order"
+  shared:
+    navbar:
+      lang: "Language"
+      rus: "Russian"
+      eng: "English"

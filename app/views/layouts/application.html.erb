@@ -15,13 +15,11 @@
 	</div>
   <div id="columns">
     <div id="side">
-      <% if @cart %>
-        <%= hidden_div_if(@cart.lina_items.empty?, id: 'cart') do %>
 
+        <div id="cart">
           <%= render @cart %>
+        </div>
 
-      <% end %>
-      <% end %>
 
       <% if session[:admin_id] %>
         <ul>

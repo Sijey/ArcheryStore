@@ -1,8 +1,9 @@
 class LinaItemsController < ApplicationController
   include CurrentCart
-  skip_before_action :authorize, only: :create
+  
   before_action :set_cart, only: [:create, :decrement]
   before_action :set_lina_item, only: [:show, :edit, :update, :destroy]
+  skip_before_action :authorize, only: [:create, :decrement]
 
   # GET /lina_items
   # GET /lina_items.json

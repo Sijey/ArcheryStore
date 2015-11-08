@@ -1,12 +1,26 @@
 = simple_form_for(@order) do |f|
   = f.error_notification
 
-  .form-inputs
-    = f.input :name
-    = f.input :surname
-    = f.input :address
-    = f.input :email
-    = f.select :pay_type, Order::PAYMENT_TYPES,
-        prompt: 'Select a payment method'
-  .form-actions
-    = f.button :submit, label= "Оформить заказ"
+  .field
+    = f.label :name, t('.name')
+    %br/
+    = f.text_field :name, size: 40
+  .field
+    = f.label :surname, t('.surname')
+    %br/
+    = f.text_field :surname, size: 40
+  .field
+    = f.label :address, t('.address')
+    %br/
+    = f.text_area :address, rows: 3, cols: 40
+  .field
+    = f.label :email
+    %br/
+    = f.email_field :email, size: 40
+  .field
+    = f.label :pay_type, t('.pay_type')
+    %br/
+    = f.select :pay_type, Order::PAYMENT_TYPES, |
+      prompt: t('.pay_prompt')             |
+  .actions
+    = f.submit t('.submit')

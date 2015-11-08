@@ -1,0 +1,30 @@
+ru:
+  store:
+    index:
+      title: "Каталог товаров"
+      add: "В корзину"
+  carts:
+    cart:
+      title: "Ваша корзина"
+      checkout: "Оформить заказ"
+      empty: "Очистить корзину"
+  lina_items:
+    lina_item:
+      delete: "Удалить"
+  orders:
+    new:
+      legend: "Пожалуйста, введите Ваши данные"
+    form:
+      name: "Имя"
+      surname: "Фамилия"
+      email: "E-mail"
+      address: "Адресс"
+      pay_type: "Способ оплаты"
+      pay_prompt: "Выберите способ оплаты"
+      submit: "Разместить заказ"
+  thanks: "Спасибо за Ваш заказ"
+  shared:
+    navbar:
+      lang: "Язык"
+      rus: "Русский"
+      eng: "Английский"
